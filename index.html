@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Google Icons Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>CSS Grid Positioning Items</title>
+    <style>
+
+        /* CSS For Hole Document */
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+
+        /* Parent Element CSS */
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 5px;
+            position: relative;
+            background-color: gray;
+            color: white;        
+            height: 100vh;
+    }
+    /* Navbar CSS */
+    .items-1{
+        display: flex;
+        flex-direction: row;
+        justify-self: end;
+        align-items: center;
+        margin: 0px 10px;
+        margin-top: 10px;
+        grid-column: 3/4;
+    }
+    .items-1 a{
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+        color: white;
+    }
+    .items-1 a:hover{
+        text-decoration: underline;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .items-1 span{
+        margin: 0 5px;
+    }
+
+    /* Aside Content */
+    .items-2{
+        display: grid;
+        grid-template-columns: 1fr auto;
+        height: 60vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner-child{
+            /* margin-top: 100px; */
+            height: 100px;
+    }
+    .one{
+            transform: rotate(90deg);
+            margin-top: 200px;
+            font-weight: bold;
+            margin-left: 45px;
+            
+        }
+    .two{
+            font-size: 70px;
+    }
+
+
+    /* Speaker Image */
+    .items-3{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-right: 73px;
+        margin-left: 30px;
+    }
+    .earphoneimg img{
+        height: 580px;
+        width: 380px;
+        filter: drop-shadow(30px 10px 10px #17c5e4);
+
+    }
+
+    /* Details CSS */
+    .items-4{
+        display: grid;
+        grid-template-rows: 1fr;
+        justify-content: start;
+        align-items: center;
+        text-align: right;
+        font-size:50px;
+        height: 550px;
+        font-weight: bold;
+    }
+    .samesize{
+        font-size: 25px;
+        margin-bottom: 80px;
+    }
+    .socialmedia{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+
+    /* Stock CSS */
+    .items-5{
+        display: grid;
+        grid-template-rows: 1fr auto;
+        position: absolute;
+        margin-top: 490px;
+        height: 155px;
+        width: 437px;
+        text-align: center;
+        background-color: white;
+        color: black;
+    }
+    .items-5 h1{
+        text-align: center;
+        margin-top: 40px;
+        font-size: 45px;
+    }
+    .items-5 h4{
+        text-align: center;
+        margin-bottom: 90px;
+    }
+    .items-5 p{
+        background-color: black;
+        color: white;
+        position: absolute;
+        width: 150px;
+        transform: rotate(90deg);
+        margin-left:344px;
+        margin-bottom: 280px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    /* Multiple Background Colors  */
+      .container{
+            opacity: 0.8;
+            animation: zaheer;
+            animation-duration: 25s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes zaheer{
+            0%{
+                background-color: cyan;
+            }
+            10%{
+                background-color: red;
+            }
+            20%{
+                background-color: green;
+            }
+            30%{
+                background-color: blue;
+            }
+            40%{
+                background-color: yellow;
+            }
+            50%{
+                background-color: brown;
+            }
+            60%{
+                background-color: orange;
+            }
+            70%{
+                background-color: rgb(83, 83, 226);
+            }
+            80%{
+                background-color: rgb(224, 36, 224);
+            }
+            90%{
+                background-color:rgb(143, 129, 129);
+            }
+            100%{
+                background-color: rgb(149, 243, 207)
+            }
+        } 
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Navbar -->
+        <div class="items-1">
+            <a class="anchor" href="#">Fashion</a>
+            <a class="anchor" href="#">Gift</a>
+            <a class="anchor" href="#">Sound</a>
+            <span class="material-symbols-outlined span">
+                search
+                </span>
+                <span class="material-symbols-outlined span">
+                    shopping_cart
+                    </span>
+                    <span class="material-symbols-outlined span">
+                        menu
+                        </span>
+        </div>
+
+
+        <!-- Aside Content -->
+        <div class="items-2">
+            <p class="inner-child one">Technology</p>
+            <p class="inner-child two">Google <br> Home</p>
+        </div>
+
+        <!-- Speaker Image -->
+        <div class="items-3 earphoneimg">            
+            <img src="Daco_4441279.png" alt="Product">
+        </div>
+
+        <!-- Detailes -->
+        <div class="items-4">$799 
+           <div class="samesize">
+            <h5 >Pause Tracks</h5>
+            <h5 >Adjust Volume</h5>
+            <h5 >Aux</h5>
+           </div>
+            <span class="socialmedia">YOUTUBE | TWITTER | FACEBOOK</span>
+        </div>
+
+        <!-- Stock -->
+        <div class="items-5"> 
+            <h1>Speaker</h1>
+            <p>Limited Edition</p>
+            <h4>Google Home</h4>
+        </div>
+    </div>
+    
+</body>
+</html>
